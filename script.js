@@ -1,25 +1,25 @@
 'use strict';
 
-let money = prompt("Ваш бюджет на месяц");
-let time = prompt("введите дату");
-let firstQ = prompt("Введите обязательную статью расходов в этом месяце");
-let secondQ = prompt("Во сколько обойдется?");
-console.log(money);
-console.log(time);
-console.log(typeof(money));
-console.log(typeof(time));
+let money = prompt("Ваш бюджет на месяц"),
+    time = prompt("введите дату");
+
 
 let appData = {
     timeData: time,
     savings: false,
-    money,
+    budget: money,
     expenses: {},
-    optionalExpenses: {
-        firstQ,
-        secondQ
-    },
+    optionalExpenses: {},
     income: [],
 };
 
-console.log(appData);
-alert(money);
+let firstQ = prompt("Введите обязательную статью расходов в этом месяце"),
+    secondQ = prompt("Во сколько обойдется?");
+
+appData.expenses.f1 = firstQ;
+appData.expenses.f2 = secondQ;
+
+
+
+
+alert(appData.budget / 30);
